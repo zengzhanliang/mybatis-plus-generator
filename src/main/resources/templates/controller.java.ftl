@@ -46,9 +46,9 @@ public class ${table.controllerName} {
 
     @Override
     @ApiOperation(value="获取 ${table.entityPath} 详细信息", notes="根据url的 id 来获取 ${table.entityPath} 详细信息")
-    @ApiImplicitParam(name = "id", value = "唯一编码", dataType = "int", paramType="query", defaultValue = "10000015")
+    @ApiImplicitParam(name = "id", value = "唯一编码", dataType = "long", paramType="query", defaultValue = "10000015")
     @RequestMapping(value="/getById", method=RequestMethod.GET)
-    public Object getById(int id) {
+    public Object getById(long id) {
         return super.getById(id);
     }
 
@@ -56,11 +56,11 @@ public class ${table.controllerName} {
     @Override
     @ApiOperation(value="分页获取 ${table.entityPath} 详细信息", notes="根据url的 pageNum, pageSize 来获取 ${table.entityPath} 详细信息")
     @ApiImplicitParams({
-            @ApiImplicitParam(name = "pageNum", value = "页码", dataType = "int", paramType="query", defaultValue = "1"),
-            @ApiImplicitParam(name = "pageSize", value = "每页数量", dataType = "int", paramType="query", defaultValue = "8")
+            @ApiImplicitParam(name = "pageNum", value = "页码", dataType = "long", paramType="query", defaultValue = "1"),
+            @ApiImplicitParam(name = "pageSize", value = "每页数量", dataType = "long", paramType="query", defaultValue = "8")
     })
     @RequestMapping(value="/getPage", method=RequestMethod.GET)
-    public Object getPage(int pageNum, int pageSize) {
+    public Object getPage(long pageNum, long pageSize) {
         return super.getPage(pageNum, pageSize);
     }
 
@@ -83,9 +83,9 @@ public class ${table.controllerName} {
 
     @Override
     @ApiOperation(value="删除 ${table.entityPath} ", notes="根据url的 id 来删除 ${table.entityPath} ")
-    @ApiImplicitParam(name = "id", value = "唯一编码", dataType = "int", paramType="query", defaultValue = "10000015")
+    @ApiImplicitParam(name = "id", value = "唯一编码", dataType = "long", paramType="query", defaultValue = "10000015")
     @RequestMapping(value="/removeById", method=RequestMethod.GET)
-    public Object removeById(int id) {
+    public Object removeById(long id) {
         return super.removeById(id);
     }
 
