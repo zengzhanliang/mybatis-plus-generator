@@ -16,9 +16,9 @@ import java.time.LocalDateTime;
 @Accessors(chain = true)
 public class BaseEntity {
 
-    @TableId(value = "id")
+    @TableId(value = "id", type = IdType.AUTO)
     @ApiModelProperty(value = "编码",example = "10000013")
-    private String id;
+    private long id;
 
     @TableField(fill = FieldFill.INSERT)
     @ApiModelProperty(value = "创建时间")
