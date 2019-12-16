@@ -22,7 +22,7 @@ public class BaseController<M extends IService<E>,E extends BaseEntity> {
      * @param id
      * @return
      */
-    public Object getById(int id){
+    public Object getById(long id){
         return service.getById( id );
     }
 
@@ -69,7 +69,7 @@ public class BaseController<M extends IService<E>,E extends BaseEntity> {
      * @param id
      * @return
      */
-    public Object removeById(int id){
+    public Object removeById(long id){
         return service.removeById( id );
     }
 }
