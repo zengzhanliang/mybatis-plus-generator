@@ -56,11 +56,11 @@ public class ${table.controllerName} {
     @Override
     @ApiOperation(value="分页获取 ${table.entityPath} 详细信息", notes="根据url的 pageNum, pageSize 来获取 ${table.entityPath} 详细信息")
     @ApiImplicitParams({
-            @ApiImplicitParam(name = "pageNum", value = "页码", dataType = "long", paramType="query", defaultValue = "1"),
-            @ApiImplicitParam(name = "pageSize", value = "每页数量", dataType = "long", paramType="query", defaultValue = "8")
+            @ApiImplicitParam(name = "pageNum", value = "页码", dataType = "int", paramType="query", defaultValue = "1"),
+            @ApiImplicitParam(name = "pageSize", value = "每页数量", dataType = "int", paramType="query", defaultValue = "8")
     })
     @RequestMapping(value="/getPage", method=RequestMethod.GET)
-    public Object getPage(long pageNum, long pageSize) {
+    public Object getPage(int pageNum, int pageSize) {
         return super.getPage(pageNum, pageSize);
     }
 
