@@ -36,7 +36,7 @@ public class BaseController<M extends IService<E>,E extends BaseEntity> {
 
         Page<E> page = new Page<>( pageNum, pageSize );
         IPage<E> responseEntity = service.page( page );
-        return responseEntity.getRecords();
+        return responseEntity;
     }
 
 
